@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="leftContainer">
+        <div class="left">
+            <img src="{% static 'images/hero.png' %}" />
+            <h1>Welcome aboard my friend</h1>
+            <p>just a couple of clicks and we start</p>
+        </div>
+    </div>
+
+    <div class="rightContainer">
+        <div class="right">
+            <h1>Welcome</h1>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li style="color: red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if page == 'login' %}
+            <div class="formContainer">
+                <form class="form" method="POST" action="">
+                    {% csrf_token %}
+                    <div>
+                        <input type="text" name="username" placeholder="Username" />
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="Password" />
+                    </div>
+            
+                    <button>Log in</button>
+                </form>
+            </div>
+            <div class="alternate">
+                <p>Have no account yet?</p>
+                <a href="{% url 'register' %}">Register</a>
+            </div>
+            
+            {% else %}
+            <div class="formContainer">
+                <form class="form" method="POST" action="">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="regInput">
+                        <label>{{field.label}}</label>
+                        {{field}}
+                    </div>
+                    {% endfor %}
+                    <button>Register</button>
+                </form>
+            </div>
+            <div class="alternate">
+                <p>Already signed up?</p>
+                <a href="{% url 'login' %}">Log in</a>
+            </div>
+            {% endif %}
+        </div>
+        
+    </div>
+    
+    
+</div>
+
+
+{% endblock content %}

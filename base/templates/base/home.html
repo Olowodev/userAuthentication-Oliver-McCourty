@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <div class="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+
+        <h1>Welcome {{request.user.username}}</h1>
+
+        <a href="{% url 'logout' %}">Logout</a>
+        
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,164 @@
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ropa Sans', sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.leftContainer {
+    flex: 1;
+    background-color: #3949AB;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+@media screen and (max-width: 809px) {
+    .leftContainer {
+        display: none;
+    }
+}
+
+.left h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.left p {
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.rightContainer {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(24px);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 64px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+input {
+    padding: 12px;
+    width: 400px;
+    border: 1px solid #D0D0D0;
+border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    background: #3949AB;
+border-radius: 40px;
+color: white;
+padding: 10px;
+font-size: 20px;
+    outline: none;
+    border: 1px solid #3949AB;
+}
+
+button:hover {
+    color: #3949AB;
+    border: 1px solid #3949AB;
+    background-color: white;
+}
+
+.alternate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.alternate p {
+    color: #828282;
+}
+
+.alternate a {
+    padding: 10px;
+    border: 1px solid #3949AB;
+    border-radius: 40px;
+    color: #3949AB;
+    width: 100%;
+    text-align: center;
+}
+
+.alternate a:hover {
+    background-color: #3949AB;
+    color: white;
+    border: 1px solid #3949AB;
+}
+
+.regInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.home a {
+    padding: 10px;
+    border: 1px solid #3949AB;
+    border-radius: 40px;
+    color: #3949AB;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.home a:hover {
+    background-color: #3949AB;
+    color: white;
+    border: 1px solid #3949AB;
+}
+  
